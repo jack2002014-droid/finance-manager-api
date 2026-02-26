@@ -21,14 +21,18 @@ markdown
 ## Installation and Setup
 
 ### 1. Clone repository
+
 ```bash
 git clone https://github.com/jack2002014-droid/finance-manager-api.git
 cd finance-manager-api
+```
 2. Install dependencies
-bash
+```bash
 pip install -r requirements.txt
+```
 3. Database setup
-sql
+
+```sql
 CREATE DATABASE finance_db;
 USE finance_db;
 
@@ -49,33 +53,40 @@ CREATE TABLE transactions (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+```
 4. Configure connection
+
 In db.py file specify your MySQL password:
 
-python
+```python
 password = 'your_password'  # leave empty if no password
+```
 5. Run server
-bash
-python app.py
-Server will start at http://127.0.0.1:5000
 
+```bash
+python app.py
+```
+Server will start at http://127.0.0.1:5000
 API Endpoints
 Method	URL	Description
 POST	/user	Create user
 POST	/transaction	Add transaction
 GET	/balance/<user_id>	Get balance
 GET	/transactions/<user_id>	Transaction history
+
 Request Examples
+
 Create user
-json
-POST /user
+
+```json
 {
     "name": "John Doe",
     "email": "john@mail.ru"
 }
+```
 Add income
-json
-POST /transaction
+
+```json
 {
     "user_id": 1,
     "amount": 50000,
@@ -83,9 +94,10 @@ POST /transaction
     "category": "salary",
     "description": "Monthly salary"
 }
+```
 Add expense
-json
-POST /transaction
+
+```json
 {
     "user_id": 1,
     "amount": 3500,
@@ -93,14 +105,20 @@ POST /transaction
     "category": "groceries",
     "description": "Supermarket"
 }
+```
 Get balance
-bash
-GET /balance/1
+
+```bash
+curl -X GET http://127.0.0.1:5000/balance/1
+```
 Get history
-bash
-GET /transactions/1?limit=5
+
+```bash
+curl -X GET http://127.0.0.1:5000/transactions/1?limit=5
+```
 Project Structure
-text
+
+```text
 finance-manager-api/
 │
 ├── app.py                 # API server
@@ -108,12 +126,14 @@ finance-manager-api/
 ├── finance_manager.py     # Business logic
 ├── requirements.txt       # Dependencies
 └── README.md              # Documentation
+```
 Dependencies
 Create requirements.txt file:
 
-text
+```txt
 flask==2.3.3
 mysql-connector-python==8.1.0
+```
 Install:
 
 bash
@@ -122,3 +142,4 @@ Author
 jack2002014-droid
 
 GitHub: @jack2002014-droid
+```
