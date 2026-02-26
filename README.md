@@ -22,7 +22,7 @@ markdown
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/ogromish/finance-manager-api.git
+git clone https://github.com/jack2002014-droid/finance-manager-api.git
 cd finance-manager-api
 2. Install dependencies
 bash
@@ -67,14 +67,14 @@ GET	/balance/<user_id>	Get balance
 GET	/transactions/<user_id>	Transaction history
 Request Examples
 Create user
-bash
+json
 POST /user
 {
     "name": "John Doe",
     "email": "john@mail.ru"
 }
 Add income
-bash
+json
 POST /transaction
 {
     "user_id": 1,
@@ -84,7 +84,7 @@ POST /transaction
     "description": "Monthly salary"
 }
 Add expense
-bash
+json
 POST /transaction
 {
     "user_id": 1,
@@ -121,5 +121,4 @@ pip install -r requirements.txt
 Author
 ogromish
 
-GitHub: @ogromish
-
+GitHub: @jack2002014-droid
