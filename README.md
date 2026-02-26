@@ -26,7 +26,7 @@ git clone https://github.com/jack2002014-droid/finance-manager-api.git
 cd finance-manager-api
 2. Install dependencies
 bash
-pip install flask mysql-connector-python
+pip install -r requirements.txt
 3. Database setup
 sql
 CREATE DATABASE finance_db;
@@ -119,6 +119,6 @@ Install:
 bash
 pip install -r requirements.txt
 Author
-ogromish
+jack2002014-droid
 
 GitHub: @jack2002014-droid
