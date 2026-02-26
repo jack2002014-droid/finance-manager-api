@@ -137,6 +137,7 @@ Install:
 
 ```bash
 pip install -r requirements.txt
+```
 Author
 jack2002014-droid
 
