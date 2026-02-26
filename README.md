@@ -142,4 +142,3 @@ Author
 jack2002014-droid
 
 GitHub: @jack2002014-droid
-```
