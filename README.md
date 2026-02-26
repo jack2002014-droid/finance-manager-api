@@ -1,4 +1,3 @@
-markdown
 # Finance Manager API
 
 **Finance Manager API** is a REST API for personal finance management. The project allows you to create users, add incomes and expenses, view balance and transaction history.
@@ -136,7 +135,7 @@ mysql-connector-python==8.1.0
 ```
 Install:
 
-bash
+```bash
 pip install -r requirements.txt
 Author
 jack2002014-droid
